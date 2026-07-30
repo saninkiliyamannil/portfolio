@@ -24,7 +24,7 @@ export function LoadingScreen() {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.4 }}
-            className="text-2xl font-bold text-foreground tracking-tight"
+            className="text-6xl font-bold text-foreground tracking-tight"
           >
             MSK
             <span className="text-primary">.</span>
