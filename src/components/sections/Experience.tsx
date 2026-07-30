@@ -18,7 +18,7 @@ function TimelineItem({ item }: { item: { title: string; organization: string; p
   const config = typeConfig[item.type as keyof typeof typeConfig];
 
   return (
-    <div className="relative pl-8 pb-12 last:pb-0">
+    <div className="relative pl-8 pb-16 last:pb-0">
       <motion.div
         className="absolute left-0 top-0 bottom-0 w-px bg-border"
         initial={{ scaleY: 0 }}

@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useSanity } from "@/contexts/SanityContext";
 
 export function Footer() {
@@ -7,6 +7,7 @@ export function Footer() {
   const pi = data?.personalInfo;
   const email = pi?.email ? `mailto:${pi.email}` : "#";
   const icons = [
+    { href: pi?.socialLinks?.whatsapp ? `https://wa.me/${pi.socialLinks.whatsapp}` : undefined, Icon: FaWhatsapp, label: "WhatsApp" },
     { href: pi?.socialLinks?.github, Icon: FaGithub, label: "GitHub" },
     { href: pi?.socialLinks?.linkedin, Icon: FaLinkedin, label: "LinkedIn" },
     { href: pi?.socialLinks?.instagram, Icon: FaInstagram, label: "Instagram" },
