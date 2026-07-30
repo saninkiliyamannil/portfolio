@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send, ExternalLink } from "lucide-react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { Reveal, RevealStagger, RevealStaggerItem } from "@/components/ui/Reveal";
@@ -16,7 +16,9 @@ export function Contact() {
     { icon: Phone, label: "Phone", value: data?.personalInfo?.phone ?? "", href: data?.personalInfo?.phone ? `tel:${data.personalInfo.phone}` : "#" },
     { icon: MapPin, label: "Location", value: data?.personalInfo?.location ?? "" },
   ];
+  const whatsappNumber = "917356512384";
   const socialItems = [
+    { href: `https://wa.me/${whatsappNumber}`, icon: FaWhatsapp, label: "WhatsApp" },
     { href: data?.personalInfo?.socialLinks?.github, icon: FaGithub, label: "GitHub" },
     { href: data?.personalInfo?.socialLinks?.linkedin, icon: FaLinkedin, label: "LinkedIn" },
     { href: data?.personalInfo?.socialLinks?.instagram, icon: FaInstagram, label: "Instagram" },
