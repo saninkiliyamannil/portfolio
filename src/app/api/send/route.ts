@@ -1,7 +1,14 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend: Resend | null = null;
+
+function getResend() {
+  if (!resend) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 export async function POST(request: Request) {
   try {
@@ -16,7 +23,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
     }
 
-    await resend.emails.send({
+    await getResend().emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "saninkiliyamannil@gmail.com",
       subject: `Portfolio Contact from ${name}`,
