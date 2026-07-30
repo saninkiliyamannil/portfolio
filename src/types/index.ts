@@ -88,4 +88,10 @@ export interface PersonalInfo {
   shortBio: string;
   aboutDescription: string;
   careerObjective: string;
+  socialLinks?: {
+    whatsapp?: string;
+    github?: string;
+    linkedin?: string;
+    instagram?: string;
+  };
 }

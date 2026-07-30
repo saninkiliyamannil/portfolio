@@ -65,6 +65,7 @@ Alongside my internship, I founded BuildWithNexora, a digital agency that provid
 My goal is to bridge the gap between development and operations while crafting user-focused applications. I believe in continuous learning and staying at the forefront of technology to solve real-world problems effectively.`,
     careerObjective: "To build scalable, secure, and user-focused digital products while growing as a Full Stack Software Engineer and DevOps professional, helping businesses transform ideas into impactful solutions.",
     socialLinks: {
+      whatsapp: "917356512384",
       github: "https://github.com/saninkiliyamannil",
       linkedin: "https://linkedin.com/in/saninkiliyamannil",
       instagram: "https://instagram.com/isaninkm",

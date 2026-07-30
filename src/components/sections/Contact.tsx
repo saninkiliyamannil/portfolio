@@ -16,9 +16,8 @@ export function Contact() {
     { icon: Phone, label: "Phone", value: data?.personalInfo?.phone ?? "", href: data?.personalInfo?.phone ? `tel:${data.personalInfo.phone}` : "#" },
     { icon: MapPin, label: "Location", value: data?.personalInfo?.location ?? "" },
   ];
-  const whatsappNumber = "917356512384";
   const socialItems = [
-    { href: `https://wa.me/${whatsappNumber}`, icon: FaWhatsapp, label: "WhatsApp" },
+    { href: data?.personalInfo?.socialLinks?.whatsapp ? `https://wa.me/${data.personalInfo.socialLinks.whatsapp}` : "#", icon: FaWhatsapp, label: "WhatsApp" },
     { href: data?.personalInfo?.socialLinks?.github, icon: FaGithub, label: "GitHub" },
     { href: data?.personalInfo?.socialLinks?.linkedin, icon: FaLinkedin, label: "LinkedIn" },
     { href: data?.personalInfo?.socialLinks?.instagram, icon: FaInstagram, label: "Instagram" },

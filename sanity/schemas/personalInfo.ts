@@ -20,6 +20,7 @@ export const personalInfo = defineType({
       title: "Social Links",
       type: "object",
       fields: [
+        { name: "whatsapp", title: "WhatsApp Number", type: "string", description: "e.g. 917356512384" },
         { name: "github", title: "GitHub", type: "url" },
         { name: "linkedin", title: "LinkedIn", type: "url" },
         { name: "instagram", title: "Instagram", type: "url" },
