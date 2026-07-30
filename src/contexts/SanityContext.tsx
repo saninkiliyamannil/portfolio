@@ -14,7 +14,7 @@ const allDataQuery = groq`{
   "nexoraInfo": *[_type == "nexoraInfo"][0],
 }`;
 
-interface SanitySocialLinks { github?: string; linkedin?: string; instagram?: string; }
+interface SanitySocialLinks { whatsapp?: string; github?: string; linkedin?: string; instagram?: string; }
 interface SanityPersonalInfo { name: string; greeting: string; role: string; email: string; phone: string; location: string; resumeUrl: string; shortBio: string; aboutDescription: string; careerObjective: string; socialLinks: SanitySocialLinks; }
 interface SanityProject { _id: string; title: string; description: string; technologies: string[]; github: string; live: string; featured: boolean; order: number; }
 interface SanitySkillCategory { _id: string; title: string; icon: string; skills: { name: string }[]; order: number; }
