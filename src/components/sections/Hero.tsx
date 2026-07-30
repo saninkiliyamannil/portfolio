@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, Mail, ExternalLink, Download } from "lucide-react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useSanity } from "@/contexts/SanityContext";
 import { Typewriter } from "@/components/ui/Typewriter";
 import { MagneticButton } from "@/components/ui/MagneticButton";
@@ -100,6 +100,7 @@ export function Hero() {
             <span className="text-xs text-muted-foreground uppercase tracking-widest">Connect</span>
             <span className="w-8 h-px bg-border" />
             {[
+              { href: data?.personalInfo?.socialLinks?.whatsapp ? `https://wa.me/${data.personalInfo.socialLinks.whatsapp}` : "#", Icon: FaWhatsapp, label: "WhatsApp" },
               { href: data?.personalInfo?.socialLinks?.github, Icon: FaGithub, label: "GitHub" },
               { href: data?.personalInfo?.socialLinks?.linkedin, Icon: FaLinkedin, label: "LinkedIn" },
               { href: data?.personalInfo?.socialLinks?.instagram, Icon: FaInstagram, label: "Instagram" },
